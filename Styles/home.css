@@ -77,3 +77,139 @@ body{
     height: 100px;
     left: 50%;
   }
+.current-town{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 50px;
+    padding-top: 20px;
+}  
+.city{
+    display: flex;
+    gap: 20px;
+}
+.add-btn {     
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 52px;
+    cursor:pointer;
+    margin-top: 10px;
+    overflow: hidden;        
+}
+.main-container-L1{
+    display: flex;
+    gap: 350px;
+    align-items: center;
+
+}
+.report{
+    background-color: #153361;
+    border-radius: 5px;
+    height: 60px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    padding: 10px;
+
+}
+.CW-L1{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    margin-bottom: 10px;
+
+}
+.CW-L2, .CW-L3{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+.w-detail{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.weather-icons{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.main-container-L2{
+    display: flex;
+    gap: 180px;
+    align-items: center;
+
+}
+.WD-1{
+    color: #FFF;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.WD-2{
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.w-explain{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.main-container-L4{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+.detl{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+.Number{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.main-container{
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    gap: 20px;
+    border-width: thin;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 5px;
+}
