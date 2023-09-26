@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+body{
+    font-family: poppins;
+    height: 2801px;
+    background: linear-gradient(180deg, rgba(21, 44, 65, 0.00) 0%, #246BAD 0.01%, rgba(16, 44, 76, 0.93) 100%);
+}
+.container-fluid{
+    height: 80px;
+    background-color: #315F89;
+    margin-top: 0;
+    color: aliceblue;
+}
+.navbar{
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.btn-outline-success{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-left: 0;
+
+}
+.form-control{
+    background-color: #464646;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+.d-flex{
+    margin-left: 50px;
+    width: 650px;
+
+}
+.me-2{
+    margin-left: 0;
+    
+}
+.navbar-expand-lg{
+    background-color: #315F89;
+}
+.home-icon{
+    margin-top: 20px;
+}
+.navbar-nav{
+    margin-left: 100px;
+
+}
+.dropdown-toggle{
+    font-size: 24px;
+}
+.user{
+    margin-left: 80px;
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+}
+.dropdown{
+    margin-left: 100px;
+
+}
+.dropdown-toggle{
+    color: white;
+
+}
+.town{
+    margin-left: 10px;
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+
+
+}
+.vertical {
+    border-left: 1px solid #B6B6B6;
+    height: 100px;
+    left: 50%;
+  }
