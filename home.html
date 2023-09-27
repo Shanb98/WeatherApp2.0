@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./Styles/home.css">
+    <link rel="icon" href="./Sources/Icon.png">
     <title>SkyVue Weather</title>
 </head>
 <body>
@@ -42,7 +43,7 @@
                     <div class = "vertical"></div>
 
                     <li class="nav-item" style="margin-top: 25px; ">
-                        <a class="nav-link user" href="#"><h1>👤 Shan</h1></a>
+                        <a class="nav-link user" href="#"><h2>👤 Shan</h2></a>
                     </li>
 
                     <li class="nav-item dropdown" style="top: 30px;">
@@ -69,58 +70,478 @@
         <h1 class="current-town">Colombo, Sri Lanka</h1>
         <button class="add-btn" type="submit">+</button>   
     </div>
-    <div class="main-container">
-        <div class="main-container-L1">
-            <div class="current-weather">
-                <p class="CW-L1">Current Weather</p>
-                <p class="CW-L2">Sep 26</p>
-                <p class="CW-L3">9:50 PM</p>
+    <div class="line1">
+        <div class="main-container">
+            <div class="main-container-L1">
+                <div class="current-weather">
+                    <p class="CW-L1">Current Weather</p>
+                    <p class="CW-L2">Sep 26</p>
+                    <p class="CW-L3">9:50 PM</p>
+                </div>
+                <a class="report" href="https://www.meteo.gov.lk/index.php?lang=en">💬 Seeing different weather? </a>
             </div>
-            <a class="report" href="https://www.meteo.gov.lk/index.php?lang=en">💬 Seeing different weather? </a>
-        </div>
-        <div class="main-container-L2">
-            <div class="weather-icons">
-                <img class="w-icon" src="./Sources/Picture1.png" alt="current weather">
-                <h1 class="w-detail" >25 °C</h1>
+            <div class="main-container-L2">
+                <div class="weather-icons">
+                    <img class="w-icon" src="./Sources/Picture1.png" alt="current weather">
+                    <h1 class="w-detail" >25 °C</h1>
+                </div>
+                <div class="weather-details">
+                    <h1 class="WD-1">Mostly Cloudy</h1>
+                    <h1 class="WD-2">Feels like 27 °C</h1>
+                </div>
             </div>
-            <div class="weather-details">
-                <h1 class="WD-1">Mostly Cloudy</h1>
-                <h1 class="WD-2">Feels like 27 °C</h1>
+            <div class="main-container-L3">
+                <p class="w-explain">The skies will be mostly cloudy. The low will be 24°c.</p>
+            </div>
+            <div class="main-container-L4">
+                <div class="AirQuality">
+                    <div class="detl AQ">UV Index</div>
+                    <div class="Number">46</div>
+                </div>
+                <div class="Wind">
+                    <div class="detl W">Wind</div>
+                    <div class="Number">5 Km/h</div>
+                </div>
+                <div class="Humidity">
+                    <div class="detl H">Humidity</div>
+                    <div class="Number">85%</div>
+                </div>
+                <div class="Visibility">
+                    <div class="detl V">Visibility</div>
+                    <div class="Number">20 Km</div>
+                </div>
+                <div class="Pressure">
+                    <div class="detl P">Pressure</div>
+                    <div class="Number">1012 hPa</div>
+                </div>
+                <div class="DewPoint">
+                    <div class="detl DP">Dew Point</div>
+                    <div class="Number">25°</div>
+                </div>
             </div>
         </div>
-        <div class="main-container-L3">
-            <p class="w-explain">The skies will be mostly cloudy. The low will be 24°c.</p>
+        <div class="map">
+            <div id ="map" style="height: 550px" >
+            </div>
         </div>
-        <div class="main-container-L4">
+    </div>
+
+    <div class="line2 future-forecast">
+        <div class="weather-forecast" id="weather-forecast">
+
+            <div class="weather-forecast-item">
+                <div class="day">Wednesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Satureday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Satureday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+
+        <div class="today" id="current-temp">
+            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Tuesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Wednesday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Thursday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Friday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">Satureday</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line3">
+        <h1 class="hourly-forecast">HOURLY FORECAST</h1>
+        <div class="hourly-table" id="hourly-table">
+
+        </div>
+    </div>
+    
+    <h1 class="hourly-forecast weather-insights">WEATHER INSIGHTS</h1>
+    <div class="line4">
+        <div class="weather-insights1">
+            <div class="rise-set" id="rise-set">
+                <div class="sunrise">
+                    <p class="sr1">🔆</p>
+                    <p class="sr2">Sunrise</p>
+                    <p class="sr3">06:00 Am</p>
+                </div>
+                <div class="sunrise-time">
+                    <img src="./Sources/Sunset Time.png" alt="">
+                    <p class="srt1">12 hr 8 min</p>
+                </div>
+                <div class="sunset">
+                    <p class="sr1">🌤</p>
+                    <p class="sr2">Sunset</p>
+                    <p class="sr3">06:00 Pm</p>
+                </div>
+            </div>
+            <div class="rise-set" id="rise-set">
+                <div class="sunrise">
+                    <p class="sr1">🌥️</p>
+                    <p class="sr2">Sunrise</p>
+                    <p class="sr3">06:00 Am</p>
+                </div>
+                <div class="sunrise-time">
+                    <img src="./Sources/Moonset Time.png" alt="">
+                    <p class="srt1">12 hr 8 min</p>
+                </div>
+                <div class="sunset">
+                    <p class="sr1">🌕</p>
+                    <p class="sr2">Sunset</p>
+                    <p class="sr3">06:00 Pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="temperature">
+            <div class="today-high-low texthl">
+                <div class="today-high">
+                    <p style="margin-bottom: 3px;" >Today's High</p>
+                    <p>24°c</p>
+                </div>
+                <div class="today-low texthl">
+                    <p style="margin-bottom: 3px;">Today's low</p>
+                    <p>24°c</p>
+                </div>
+            </div>
+            <img class="thermostat" src="./Sources/Thermostat.png" alt="" style="width: 110px; height: 300px; ">
+            <div class="avg-high-low texthl">
+                <div class="avg-high">
+                    <p style="margin-bottom: 3px;">Average High</p>
+                    <p>24°c</p>
+                </div>
+                <div class="avg-low texthl">
+                    <p style="margin-bottom: 3px;">Average low</p>
+                    <p>24°c</p>
+                </div>
+            </div>
+        </div>
+        <div class="today-vs-yesterday">
+            <p class="text-heading">Today vs. Yesterday </p>
+            <div class="text-details">
+                <p class="infomations">Today's rainfall is 0.76 cm. Is this above the average for Sep 19?</p>
+                <img src="./Sources/Precipitaion.png" alt="" class="precipitation">
+            </div>
+        </div>
+    </div>
+    <div class="line5">
+        <div class="daily-summery">
+            <p class="Summery">Daily Summery</p>
+            <p class="summery-detail">SMALL CRAFT ADVISORY REMAINS IN EFFECT FROM 5 PM THIS AFTERNOON TO 3 AM EST FRIDAY... </p>
+            <p class="what info-data">WHAT : North winds 15 to 20 kt with gusts up to 25 kt and seas 3 to 5 ft expected. </p>
+            <p class="where info-data">WHERE : Coastal waters from Little Egg Inlet to Great Egg Inlet NJ out 20 nm, Coastal waters from Great Egg Inlet to Cape May NJ out 20 nm and Coastal waters from Managua Inlet into Little Egg Inlet NJ out 20 nm.</p>
+            <p class="when info-data">WHEN : From 5 PM this afternoon to 3 AM EST Friday.</p>
+            <p class="impact info-data">IMPACTS : Conditions will be hazardous to small craft.</p>
+        </div>
+        <div class="suggetions">
+            <p class="Summery">Suggestions for your day ....</p>
+            <div class="four-suggetions">
+                <div class="first-two-suggetions">
+                    <div class="umbrella">
+                        <div class="the-icon">
+                            <p>☂️</p>
+                        </div>
+                        <div class="the-data">
+                            <p class="umbrella1">Umbrella</p>
+                            <p class="umbrella-data">🔴 Must</p>
+                        </div>
+                    </div>
+                    <div class="umbrella">
+                        <div class="the-icon">
+                            <p>🏃🏻‍♂️</p>
+                        </div>
+                        <div class="the-data">
+                            <p class="umbrella1">Outdoors</p>
+                            <p class="umbrella-data">🔴 Poor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-two-suggetions">
+                    <div class="umbrella">
+                        <div class="the-icon">
+                            <p>👕</p>
+                        </div>
+                        <div class="the-data">
+                            <p class="umbrella1">Clothing</p>
+                            <p class="umbrella-data">🟡 Shorts</p>
+                        </div>
+                    </div>
+                    <div class="umbrella">
+                        <div class="the-icon">
+                            <p>🌡️</p>
+                        </div>
+                        <div class="the-data">
+                            <p class="umbrella1">Heat</p>
+                            <p class="umbrella-data">🟢 Extreme</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <h1 class="hourly-forecast weather-insights">AIR POLLUTION</h1>
+    <div class="line6">
+        <div class="line6-first">
+            <div class="line6-firstrow">
+                <div class="Air-Quality-Index">
+                    <p class="aqi-name">Air Quality Index</p>
+                    <p class="aqi-number">1.0</p>
+                </div>
+            </div>
+            <a class="report" href="https://en.wikipedia.org/wiki/Air_quality_index">💬 What is Air Quality Index ? </a>
+        </div>
+
+        <div class="main-container-L4 aqi-parameters">
             <div class="AirQuality">
-                <div class="detl AQ">UV Index</div>
-                <div class="Number">46</div>
+                <div class="detl AQ">SO₂</div>
+                <div class="Number">201.941 μg/m³</div>
             </div>
             <div class="Wind">
-                <div class="detl W">Wind</div>
-                <div class="Number">5 Km/h</div>
+                <div class="detl W">NO₂</div>
+                <div class="Number">0.018 μg/m³</div>
             </div>
             <div class="Humidity">
-                <div class="detl H">Humidity</div>
-                <div class="Number">85%</div>
+                <div class="detl H">PM₁₀</div>
+                <div class="Number">0.771 μg/m³</div>
             </div>
             <div class="Visibility">
-                <div class="detl V">Visibility</div>
-                <div class="Number">20 Km</div>
+                <div class="detl V">PM₂.₅</div>
+                <div class="Number">0.640 μg/m³</div>
             </div>
             <div class="Pressure">
-                <div class="detl P">Pressure</div>
-                <div class="Number">1012 hPa</div>
+                <div class="detl P">O₃</div>
+                <div class="Number">0.5 μg/m³</div>
             </div>
             <div class="DewPoint">
-                <div class="detl DP">Dew Point</div>
-                <div class="Number">25°</div>
+                <div class="detl DP">CO</div>
+                <div class="Number">0.540 μg/m³</div>
             </div>
         </div>
     </div>
 <!--ending of Body -->
 
+<!--startin of Footer -->
+<div class="container my-5 footer-container">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #45526e"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Company name
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+              <p>
+                <a class="text-white">MDBootstrap</a>
+              </p>
+              <p>
+                <a class="text-white">MDWordPress</a>
+              </p>
+              <p>
+                <a class="text-white">BrandFlow</a>
+              </p>
+              <p>
+                <a class="text-white">Bootstrap Angular</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Useful links
+              </h6>
+              <p>
+                <a class="text-white">Your Account</a>
+              </p>
+              <p>
+                <a class="text-white">Become an Affiliate</a>
+              </p>
+              <p>
+                <a class="text-white">Shipping Rates</a>
+              </p>
+              <p>
+                <a class="text-white">Help</a>
+              </p>
+            </div>
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+  
+        <hr class="my-3">
+  
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/"
+                   >MDBootstrap.com</a
+                  >
+              </div>
+              <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+              <!-- Facebook -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-facebook-f"></i
+                ></a>
+  
+              <!-- Twitter -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-twitter"></i
+                ></a>
+  
+              <!-- Google -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-google"></i
+                ></a>
+  
+              <!-- Instagram -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-instagram"></i
+                ></a>
+            </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+        <!-- Section: Copyright -->
+      </div>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
+  <div class="space">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </div>
+        
+
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="./js/map.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
