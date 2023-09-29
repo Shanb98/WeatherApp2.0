@@ -4,6 +4,7 @@ body{
     height: 2801px;
     background: linear-gradient(180deg, rgba(21, 44, 65, 0.00) 0%, #246BAD 0.01%, rgba(16, 44, 76, 0.93) 100%);
 }
+
 .container-fluid{
     height: 80px;
     background-color: #315F89;
@@ -39,23 +40,11 @@ body{
 .navbar-expand-lg{
     background-color: #315F89;
 }
-.home-icon{
-    margin-top: 20px;
-}
-.navbar-nav{
-    margin-left: 100px;
 
-}
 .dropdown-toggle{
-    font-size: 24px;
+    font-size: 20px;
 }
-.user{
-    margin-left: 80px;
-    color: white;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: medium;
-}
+
 .dropdown{
     margin-left: 100px;
 
@@ -64,15 +53,7 @@ body{
     color: white;
 
 }
-.town{
-    margin-left: 10px;
-    color: white;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 30px;
 
-
-}
 .vertical {
     border-left: 1px solid #B6B6B6;
     height: 100px;
@@ -81,11 +62,11 @@ body{
 .current-town{
     color: #FFF;
     font-family: Inter;
-    font-size: 52px;
+    font-size: 22px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-    margin-left: 50px;
+    margin-left: 30px;
     padding-top: 20px;
 }  
 .city{
@@ -98,24 +79,24 @@ body{
     border: none;
     color: #FFF;
     font-family: Inter;
-    font-size: 52px;
+    font-size: 22px;
     cursor:pointer;
     margin-top: 10px;
     overflow: hidden;        
 }
 .main-container-L1{
     display: flex;
-    gap: 350px;
+    gap: 250px;
     align-items: center;
 
 }
 .report{
     background-color: #153361;
     border-radius: 5px;
-    height: 60px;
+    height: 38px;
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -126,7 +107,7 @@ body{
 .CW-L1{
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 800;
     margin-bottom: 10px;
@@ -135,7 +116,7 @@ body{
 .CW-L2, .CW-L3{
     color: #FFF;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -144,7 +125,7 @@ body{
 .w-detail{
     color: #FFF;
     font-family: Inter;
-    font-size: 120px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -156,20 +137,20 @@ body{
 }
 .main-container-L2{
     display: flex;
-    gap: 220px;
+    gap: 70px;
     align-items: center;
 
 }
 .WD-1{
     color: #FFF;
-    font-size: 40px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .WD-2{
     color: #FFF;
-    font-size: 30px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -177,20 +158,20 @@ body{
 .w-explain{
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 .main-container-L4{
     display: flex;
-    gap: 100px;
+    gap: 70px;
     align-items: center;
 }
 .detl{
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -198,7 +179,7 @@ body{
 .Number{
     color: #FFF;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -207,7 +188,7 @@ body{
     margin-left: 20px;
     padding: 20px;
     display: flex;
-    width: 1200px;
+    width: 800px;
     flex-direction: column;
     gap: 20px;
     border-width: thin;
@@ -226,31 +207,11 @@ body{
 
 
 .future-forecast{
-    background-color: #213c5b;
-    padding: 25px;
-    position: fixed;
-    padding-left: 20px;
-    bottom: 0;
-    display: flex;
-    color:white;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    overflow-y: hidden;
+ color: white;
+ margin-top: 30px;
+ margin-bottom: 30px;
 }
 
-.future-forecast .today{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    width: 400px;
-    border-radius: 10px;
-    padding:15px;
-    padding-right: 40px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.5)
-}
 
 .future-forecast .today .day{
     padding: 5px 15px;
@@ -266,6 +227,7 @@ body{
 
 .future-forecast .weather-forecast{
     display: flex;
+    margin-left: 30px;
 }
 
 .weather-forecast .weather-forecast-item{
@@ -273,6 +235,7 @@ body{
     flex-direction: column;
     align-items: center;
     width: 150px;
+    height: 200px;
     justify-content: center;
     margin: 0 10px;
     border: 1px solid #eee;
@@ -292,19 +255,13 @@ body{
     font-weight: 200;
     font-size: 15px;
 }
-@media only screen and (max-width: 2000px){
-    .future-forecast{
-        justify-content: start;
-        align-items: none;
-        overflow-x: scroll;
-    }
-}
+
 .hourly-forecast{
     margin-top: 50px;
     margin-left: 30px;
     color: #FFF;
     font-family: Inter;
-    font-size: 36px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -312,8 +269,8 @@ body{
 .hourly-table{
     display: flex;
     justify-content: center;
-    height: 500px;
-    width: 1400px;
+    height: 400px;
+    width: 1000px;
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     border-radius: 10px;
@@ -321,7 +278,7 @@ body{
 .sr1{
     color: #FFF;
     font-family: Inter;
-    font-size: 50px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -329,7 +286,7 @@ body{
 .sr2{
     color: #FFF;
     font-family: Inter;
-    font-size: 40px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -337,7 +294,7 @@ body{
 .sr3{
     color: #FFF;
     font-family: Inter;
-    font-size: 27px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 100;
     line-height: normal;
@@ -345,7 +302,7 @@ body{
 .srt1{
     color: #FFF;
     font-family: Inter;
-    font-size: 35px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -382,7 +339,7 @@ body{
 .texthl{
     color: #FFF;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -393,7 +350,7 @@ body{
     display: flex;
     gap: 10px;
     padding: 20px;
-    padding-top: 80px;
+    padding-top: 40px;
     border-radius: 10px;
     width: 450px;
     background-color: rgba(255, 255, 255, 0.12);
@@ -413,25 +370,26 @@ body{
     margin-top: 47px;
 }
 .infomations{
-    width: 250px;
+    width: 120px;
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 .text-heading{
     color: #FFF;
     font-family: Inter;
-    font-size: 44px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
 }
 .text-details{
     display: flex;
+    margin-top: 70px;
 
 }
 .today-vs-yesterday{
@@ -449,7 +407,7 @@ body{
 .Summery{
     color: #FFF;
     font-family: Inter;
-    font-size: 44px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -457,7 +415,7 @@ body{
 .info-data{
     color: #FFF;
     font-family: Inter;
-    font-size: 25px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -465,7 +423,7 @@ body{
 .summery-detail{
     color: #FFF;
     font-family: Inter;
-    font-size: 28px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -480,7 +438,7 @@ body{
 }
 .the-icon{
     font-family: Inter;
-    font-size: 80px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -488,7 +446,7 @@ body{
 .umbrella1{
     color: #FFF;
     font-family: Inter;
-    font-size: 34px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -496,7 +454,7 @@ body{
 .umbrella-data{
     color: #FFF;
     font-family: Inter;
-    font-size: 26px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -509,7 +467,7 @@ body{
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     margin-right: 20px;
-    width: 260px;
+    width: 210px;
     border-radius: 10px;
 }
 .first-two-suggetions{
@@ -538,7 +496,7 @@ body{
 .aqi-name{
     color: #FFF;
     font-family: Inter;
-    font-size: 30px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -546,7 +504,7 @@ body{
 .aqi-number{
     color: #FFF;
     font-family: Inter;
-    font-size: 35px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -554,9 +512,9 @@ body{
 }
 .line6-firstrow{
     padding: 20px;
-    padding-top: 30px;
     border-radius: 10px;
-    width: 270px;
+    width: 230px;
+    height: 100px;
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     margin-right: 20px;
@@ -572,7 +530,7 @@ body{
 .line6{
     padding: 20px;
     border-radius: 10px;
-    width: 1350px;
+    width: 1150px;
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     margin-right: 20px; 
