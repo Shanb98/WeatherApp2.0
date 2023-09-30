@@ -179,7 +179,7 @@ body{
 .Number{
     color: #FFF;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -541,7 +541,7 @@ body{
 .line6{
     padding: 20px;
     border-radius: 10px;
-    width: 1150px;
+    width: 1030px;
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     margin-right: 20px; 
