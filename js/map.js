@@ -180,7 +180,7 @@ function getWeatherData(lat, lon){
             averagelow.html(resp.main.feels_like + " °c");
 
             if (resp.rain && resp.rain["1h"]) {
-                var rainfall = resp.rain["1h"] / 10;
+                var rainfall = (resp.rain["1h"] / 10).toFixed(3);
                 rain.html("Today's rainfall is " + rainfall + " cm. Is this above the average for than yesterday");
             } else {
                 console.log("Rainfall data is unavailable");
@@ -242,5 +242,146 @@ function getWeatherData(lat, lon){
             aqi.html(resp.list[0].main.aqi);
         }
     })
+
+    const search = $("#searchTxt");
+
+    $.ajax({
+        method : "GET",
+        url: `https://api.weatherapi.com/v1/forecast.json?key=b5ddc00e56634a52b58132135231809&days=6&q=${search.val()}`,
+        success : (resp) => {
+            console.log(resp);
+
+
+            $('.mm-set').html(`
+            <div class="sunrise">
+            <p class="sr1">🌘</p>
+            <p class=" mr2">Moonrise</p>
+            <p class="sr3" id="moonrise">${resp.forecast.forecastday[0].astro.moonrise}</p>
+            </div>
+            <div class="sunrise-time">
+                <img src="./Sources/Moonset Time.png" alt="" width="230" height="130">
+                <p class="srt1">12 hr 8 min</p>
+            </div>
+            <div class="sunset">
+                <p class="sr1">🌕</p>
+                <p class=" mr2" >Moonset</p>
+                <p class="sr3" id="moonset">${resp.forecast.forecastday[0].astro.moonset}</p>
+            </div>
+            `)
+
+
+            $('.next-week').html(`
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[1].date}</div>
+                <img src="${resp.forecast.forecastday[1].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[1].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[1].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[2].date}</div>
+                <img src="${resp.forecast.forecastday[2].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[2].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[2].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[3].date}</div>
+                <img src="${resp.forecast.forecastday[3].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[3].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[3].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[4].date}</div>
+                <img src="${resp.forecast.forecastday[4].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[4].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[4].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[5].date}</div>
+                <img src="${resp.forecast.forecastday[5].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[5].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[5].day.maxtemp_c}&#176; C</div>
+            </div>
+        `);
+            
+
+        }
+    })
+
+//----------------------Get current Date-----------------------------
+    const dateToday = new Date();
+    var year1 = dateToday.getFullYear();
+    var month1 = String(dateToday.getMonth() + 1).padStart(2, '0'); // Adding 1 to month because it is zero-based
+    var day1 = String(dateToday.getDate()).padStart(2, '0');
+    var formattedDateToday = year1 + '-' + month1 + '-' + day1;
+
+    console.log(formattedDateToday);
+
+    //----------------------Get seven Days ago date-------------------------
+
+    var currenDate = new Date();
+
+    // Subtract 7 days (7 * 24 * 60 * 60 * 1000 milliseconds) from the current date
+    var sevenDaysAgo = new Date(currenDate.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+    // Extract the year, month, and day components from the sevenDaysAgo date
+    var year = sevenDaysAgo.getFullYear();
+    var month = String(sevenDaysAgo.getMonth() + 1).padStart(2, '0'); // Adding 1 to month because it is zero-based
+    var day = String(sevenDaysAgo.getDate()).padStart(2, '0');
+
+    // Create the "yyyy-mm-dd" formatted string
+    var formattedDate = year + '-' + month + '-' + day;
+    console.log(formattedDate);
+
+    $.ajax({
+        method: "GET",
+        url: `https://api.weatherapi.com/v1/history.json?&dt=${formattedDate}&end_dt=${formattedDateToday}&key=b5ddc00e56634a52b58132135231809&q=${search.val()}`,
+        success: (resp) => {
+            console.log(resp);
+            $('.history-week').html(`
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[6].date}</div>
+                <img src="${resp.forecast.forecastday[6].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[6].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[6].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[5].date}</div>
+                <img src="${resp.forecast.forecastday[5].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[5].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[5].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[4].date}</div>
+                <img src="${resp.forecast.forecastday[4].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[4].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[4].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[3].date}</div>
+                <img src="${resp.forecast.forecastday[3].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[3].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[3].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[2].date}</div>
+                <img src="${resp.forecast.forecastday[2].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[2].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[2].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[1].date}</div>
+                <img src="${resp.forecast.forecastday[1].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[1].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[1].day.maxtemp_c}&#176; C</div>
+            </div>
+            <div class="weather-forecast-item">
+                <div class="day">${resp.forecast.forecastday[0].date}</div>
+                <img src="${resp.forecast.forecastday[0].day.condition.icon}" alt="weather icon" class="w-icon">
+                <div class="temp">Night - ${resp.forecast.forecastday[0].day.mintemp_c}&#176; C</div>
+                <div class="temp">Day - ${resp.forecast.forecastday[0].day.maxtemp_c}&#176; C</div>
+            </div>
+        `);
+        }
+    });
 
 }

@@ -214,9 +214,10 @@ body{
 
 
 .future-forecast .today .day{
-    padding: 5px 15px;
+    padding: 5px 5px;
     background: #009064;
     border-radius: 50px;
+
     text-align: center;
 }
 
@@ -249,6 +250,8 @@ body{
     background: #3C3C;
     border-radius: 50px;
     text-align: center;
+    font-size: 14px;
+
 }
 
 .weather-forecast .weather-forecast-item .temp{
@@ -274,6 +277,14 @@ body{
     background-color: rgba(255, 255, 255, 0.12);
     margin-left: 20px;
     border-radius: 10px;
+}
+.mr2{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .sr1{
     color: #FFF;
