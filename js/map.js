@@ -104,9 +104,26 @@ const visibility = $("#Visibility");
 const humidity = $("#Humidity");
 const wind = $("#Wind");
 const uVIndex = $("#UV-Index");
-const sunrise = $("#sunrise")
-const sunset = $("#sunset")
-const sunriseTime = $(".srt1")
+const sunrise = $("#sunrise");
+const sunset = $("#sunset");
+const sunriseTime = $(".srt1");
+const todayhigh = $("#today-high");
+const todaylow = $("#today-low");
+const averagehigh = $("#average-high");
+const averagelow = $("#average-low");
+const rain = $(".infomations");
+const umbrellaMust = $("#umbrella-must");
+const clothingMust = $("#clothing-must");
+const outdoorsMust = $("#outdoors-must");
+const heatMust = $("#heat-must");
+
+const aq = $("#Number-AQ");
+const w = $("#Number-w");
+const h = $("#Number-h");
+const v = $("#Number-v");
+const p = $("#Number-p");
+const dp = $("#Number-dp");
+const aqi = $(".aqi-number");
 
 function getWeatherData(lat, lon){
     console.log(searchTxt.val());
@@ -155,7 +172,75 @@ function getWeatherData(lat, lon){
             const durationInSeconds = sunsetTimestamp - sunriseTimestamp;
             const hours = Math.floor(durationInSeconds / 3600);
             const minutes = Math.floor((durationInSeconds % 3600) / 60);
-            sunriseTime.html(hours + " hr " + minutes + " min");       
+            sunriseTime.html(hours + " hr " + minutes + " min");   
+            
+            todayhigh.html(resp.main.temp_max + " °c");
+            todaylow.html(resp.main.temp_min + " °c");
+            averagehigh.html(resp.main.temp + " °c");
+            averagelow.html(resp.main.feels_like + " °c");
+
+            if (resp.rain && resp.rain["1h"]) {
+                var rainfall = resp.rain["1h"] / 10;
+                rain.html("Today's rainfall is " + rainfall + " cm. Is this above the average for than yesterday");
+            } else {
+                console.log("Rainfall data is unavailable");
+            }
+
+
+            if(iconCode==="01d" ||iconCode==="01n"||iconCode==="02d"||iconCode==="02n"||iconCode==="03d"||iconCode==="03n" ){
+                umbrellaMust.html("🟢 No need");
+            }
+            else if(iconCode==="04d" ||iconCode==="04n"){
+                umbrellaMust.html("🟡 Need");
+            }
+            else{
+                umbrellaMust.html("🔴 Must");
+            }
+
+            if(iconCode==="01d" ||iconCode==="01n"||iconCode==="02d"||iconCode==="02n" ){
+                outdoorsMust.html("🟢 Excellent");
+            }
+            else if(iconCode==="04d" ||iconCode==="04n"||iconCode==="03d"||iconCode==="03n"){
+                outdoorsMust.html("🟡 Good");
+            }
+            else{
+                outdoorsMust.html("🔴 Poor");
+            }
+
+
+            const feelingTemp = resp.main.feels_like;
+            if(feelingTemp <=19 ){
+                clothingMust.html("🔴 Coat");
+                heatMust.html("🔴 Cold");
+
+            }
+            else if(feelingTemp<=25 && feelingTemp>=20){
+                clothingMust.html("🟡 Trousers");
+                heatMust.html("🟡 Good");
+
+            }
+            else{
+                clothingMust.html("🟢 Shorts");
+                heatMust.html("🟢 Extreme");
+
+            }
         }
     });
+
+
+    $.ajax({
+        method : "GET",
+        url: `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1e5996669319635c1bf3b6e0544995ae&units=metric`,
+        success : (resp) => {
+            console.log(resp);
+            aq.html((resp.list[0].components.so2).toFixed(3) + " μg/m³") ;
+            w.html((resp.list[0].components.no2).toFixed(3)+ " μg/m³");
+            h.html((resp.list[0].components.pm10).toFixed(3)+ " μg/m³");
+            v.html((resp.list[0].components.pm2_5).toFixed(3)+ " μg/m³");
+            p.html((resp.list[0].components.o3).toFixed(3)+ " μg/m³");
+            dp.html((resp.list[0].components.co).toFixed(3)+ " μg/m³");
+            aqi.html(resp.list[0].main.aqi);
+        }
+    })
+
 }

@@ -228,29 +228,29 @@
             <div class="today-high-low texthl">
                 <div class="today-high">
                     <p style="margin-bottom: 3px;" >Today's High</p>
-                    <p>24°c</p>
+                    <p id="today-high">24°c</p>
                 </div>
                 <div class="today-low texthl">
                     <p style="margin-bottom: 3px;">Today's low</p>
-                    <p>24°c</p>
+                    <p id="today-low">24°c</p>
                 </div>
             </div>
             <img class="thermostat" src="./Sources/Thermostat.png" alt="" style="width: 110px; height: 300px; ">
             <div class="avg-high-low texthl">
                 <div class="avg-high">
                     <p style="margin-bottom: 3px;">Average High</p>
-                    <p>24°c</p>
+                    <p id="average-high">24°c</p>
                 </div>
                 <div class="avg-low texthl">
                     <p style="margin-bottom: 3px;">Average low</p>
-                    <p>24°c</p>
+                    <p id="average-low">24°c</p>
                 </div>
             </div>
         </div>
         <div class="today-vs-yesterday">
             <p class="text-heading">Today vs. Yesterday </p>
             <div class="text-details">
-                <p class="infomations">Today's rainfall is 0.76 cm. Is this above the average for Sep 19?</p>
+                <p class="infomations">Today's rainfall is 0.76 cm. Is this above the average than yesterday</p>
                 <img src="./Sources/Precipitaion.png" alt="" class="precipitation" width="150" height="150">
             </div>
         </div>
@@ -274,7 +274,7 @@
                         </div>
                         <div class="the-data">
                             <p class="umbrella1">Umbrella</p>
-                            <p class="umbrella-data">🔴 Must</p>
+                            <p class="umbrella-data" id="umbrella-must">🔴 Must</p>
                         </div>
                     </div>
                     <div class="umbrella">
@@ -283,7 +283,7 @@
                         </div>
                         <div class="the-data">
                             <p class="umbrella1">Outdoors</p>
-                            <p class="umbrella-data">🔴 Poor</p>
+                            <p class="umbrella-data" id="outdoors-must">🔴 Poor</p>
                         </div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                         </div>
                         <div class="the-data">
                             <p class="umbrella1">Clothing</p>
-                            <p class="umbrella-data">🟡 Shorts</p>
+                            <p class="umbrella-data" id="clothing-must">🟡 Shorts</p>
                         </div>
                     </div>
                     <div class="umbrella">
@@ -303,7 +303,7 @@
                         </div>
                         <div class="the-data">
                             <p class="umbrella1">Heat</p>
-                            <p class="umbrella-data">🟢 Extreme</p>
+                            <p class="umbrella-data" id="heat-must">🟢 Extreme</p>
                         </div>
                     </div>
                 </div>
@@ -327,27 +327,27 @@
         <div class="main-container-L4 aqi-parameters">
             <div class="AirQuality">
                 <div class="detl AQ">SO₂</div>
-                <div class="Number">201.941 μg/m³</div>
+                <div class="Number" id="Number-AQ">201.941 μg/m³</div>
             </div>
             <div class="Wind">
                 <div class="detl W">NO₂</div>
-                <div class="Number">0.018 μg/m³</div>
+                <div class="Number" id="Number-w">0.018 μg/m³</div>
             </div>
             <div class="Humidity">
                 <div class="detl H">PM₁₀</div>
-                <div class="Number">0.771 μg/m³</div>
+                <div class="Number" id="Number-h">0.771 μg/m³</div>
             </div>
             <div class="Visibility">
                 <div class="detl V">PM₂.₅</div>
-                <div class="Number">0.640 μg/m³</div>
+                <div class="Number" id="Number-v">0.640 μg/m³</div>
             </div>
             <div class="Pressure">
                 <div class="detl P">O₃</div>
-                <div class="Number">0.5 μg/m³</div>
+                <div class="Number" id="Number-p">0.5 μg/m³</div>
             </div>
             <div class="DewPoint">
                 <div class="detl DP">CO</div>
-                <div class="Number">0.540 μg/m³</div>
+                <div class="Number" id="Number-dp">0.540 μg/m³</div>
             </div>
         </div>
     </div>
@@ -500,7 +500,8 @@
   </div>
   <!-- End of .container -->
 
-  </div>
+  <div id="openweathermap-widget-11"></div>
+</div>
         
 
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
