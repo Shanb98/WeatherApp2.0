@@ -12,6 +12,7 @@ https://shanb98.github.io/WeatherApp2.0/
 - [APIs Used](#apis-used)
 - [Performance](#performance)
 - [Responsive Design](#responsive-design)
+- [Contribution Guidelines](#responsive-design)
 
 ## Features
 
@@ -72,6 +73,54 @@ Thank you for using the Weather Application! If you have any questions or feedba
 <img width="940" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/7169d501-208f-470c-b474-a1d39f338776">
 <img width="940" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/d11bea10-0f8a-4132-a9e1-21d9a4e1b20d">
 
+## Contribution Guide
+
+We welcome contributions from the open-source community to help improve the Weather Application. Whether you want to report a bug, suggest an enhancement, or contribute code, we appreciate your help in making this project better.
+
+### Reporting Issues
+
+If you encounter any bugs, issues, or have feature requests, please open an issue on our [GitHub repository](https://github.com/your/repository).
+
+When reporting issues, please provide as much detail as possible, including:
+
+- A clear and concise description of the problem.
+- Steps to reproduce the issue.
+- Screenshots, if applicable.
+- Any error messages you encountered.
+
+### Making Contributions
+
+If you'd like to contribute to the project by fixing bugs or adding new features, please follow these steps:
+
+1. Fork the repository to your GitHub account.
+
+2. Clone the forked repository to your local machine:
+   ```sh
+   git clone https://github.com/your-username/your-forked-repo.git
+   ```
+
+3. Create a new branch for your contribution:
+   ```sh
+   git checkout -b feature-or-fix-name
+   ```
+
+4. Make your changes and commit them with a clear and concise commit message:
+   ```sh
+   git commit -m "Add feature or fix"
+   ```
+
+5. Push your changes to your GitHub fork:
+   ```sh
+   git push origin feature-or-fix-name
+   ```
+
+6. Create a pull request (PR) from your fork to the original repository:
+   - Visit the [GitHub repository](https://github.com/your/repository).
+   - Click on the "New Pull Request" button.
+   - Select the base branch (usually `main` or `master`) and your feature branch.
+   - Provide a clear description of your changes in the PR.
+
+7. Wait for feedback and approval from the maintainer.
 
 
 
