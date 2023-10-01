@@ -3,6 +3,7 @@ var map;
 var geocoder;
 function InitializeMap(lat, lon) {
 
+
     var latlng = new google.maps.LatLng(lat, lon);
     var myOptions =
     {
