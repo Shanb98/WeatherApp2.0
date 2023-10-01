@@ -55,6 +55,8 @@ The Weather Application is built using the following technologies:
 ## APIs Used
 - **Google Maps API**: Used to display the location on a map.
 - **OpenWeatherAPI**: Used to retrieve weather data, including current conditions, forecasts, and historical weather.
+- **TheWeatherAPI**: Used to retrieve weather data, including current conditions, forecasts, and historical weather.
+
 
 ## Performance
 The website is optimized for performance to ensure fast loading times and a smooth user experience. Efforts have been made to minimize unnecessary network requests and optimize resource loading.
@@ -65,11 +67,12 @@ The application is fully responsive, ensuring that it adapts seamlessly to diffe
 Thank you for using the Weather Application! If you have any questions or feedback, please don't hesitate to contact us.
 
 ## UI
+<img width="942" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/bd252398-f77a-4532-9010-3f63b6a0e0f9">
+<img width="941" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/104f3181-83ca-4a1e-8354-c492999a1198">
+<img width="940" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/7169d501-208f-470c-b474-a1d39f338776">
+<img width="940" alt="image" src="https://github.com/Shanb98/WeatherApp2.0/assets/130221905/d11bea10-0f8a-4132-a9e1-21d9a4e1b20d">
 
-![image](https://github.com/rashen33/WeatherApp2.0/assets/128305496/bf3d24c9-71f5-4c2d-8f0a-2dc5b6a3ab32)
-![image](https://github.com/rashen33/WeatherApp2.0/assets/128305496/e30ab121-3fac-46c0-9e0e-e7bb2ea03797)
-![image](https://github.com/rashen33/WeatherApp2.0/assets/128305496/8f94abc3-c9ed-4156-8298-5534399c6deb)
-![image](https://github.com/rashen33/WeatherApp2.0/assets/128305496/8e43eecb-428d-418a-bff4-fa204d0c7f22)
+
 
 
 
