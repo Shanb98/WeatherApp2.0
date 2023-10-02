@@ -385,4 +385,5 @@ function getWeatherData(lat, lon){
         }
     });
 
+
 }
