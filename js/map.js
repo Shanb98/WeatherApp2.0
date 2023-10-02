@@ -57,7 +57,7 @@ function clicked(){
     console.log(searchTxt.val());
     $.ajax({
         method : "GET",
-        url: `http://api.openweathermap.org/geo/1.0/direct?q=${searchTxt.val()}&appid=1e5996669319635c1bf3b6e0544995ae`,
+        url: `https://api.openweathermap.org/geo/1.0/direct?q=${searchTxt.val()}&appid=1e5996669319635c1bf3b6e0544995ae`,
         success : (resp) => {
            console.log(resp);
            searchedCity.html(resp[0].name +", " + resp[0].country); 
@@ -231,7 +231,7 @@ function getWeatherData(lat, lon){
 
     $.ajax({
         method : "GET",
-        url: `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1e5996669319635c1bf3b6e0544995ae&units=metric`,
+        url: `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1e5996669319635c1bf3b6e0544995ae&units=metric`,
         success : (resp) => {
             console.log(resp);
             aq.html((resp.list[0].components.so2).toFixed(3) + " μg/m³") ;
