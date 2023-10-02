@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+
+
 body{
     font-family: poppins;
     height: 2801px;
@@ -93,7 +96,7 @@ body{
 .report{
     background-color: #153361;
     border-radius: 5px;
-    height: 38px;
+    height: auto;
     color: #FFF;
     font-family: Inter;
     font-size: 16px;
@@ -102,7 +105,7 @@ body{
     line-height: normal;
     text-decoration: none;
     padding: 10px;
-
+    overflow: hidden;
 }
 .CW-L1{
     color: #FFF;
